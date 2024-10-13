@@ -2,15 +2,6 @@
 
 A book review platform (backend focused) built with Node.js, Express, and MySQL. Developed for the K Youth Course as a project for backend development proficiency. Supports dynamic rating and reviews, and is ready for deployment.
 
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [License](#license)
-
 ## Features
 
 - Users can browse books, view details, and filter by title, author, or rating.
