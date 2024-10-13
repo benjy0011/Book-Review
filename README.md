@@ -1,4 +1,4 @@
-![screencapture-localhost-3000-books-2024-10-13-23_34_17](https://github.com/user-attachments/assets/0adccb95-ca12-4425-9b42-5fd0135a8fb5)# Book Review Platform
+# Book Review Platform
 
 A book review platform (backend focused) built with Node.js, Express, and MySQL. Developed for the K Youth Course as a project for backend development proficiency. Supports dynamic rating and reviews, and is ready for deployment.
 
