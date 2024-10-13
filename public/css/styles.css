@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filterBtn {
+    background-color: red;
+}
+
+.actions-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-color: #003bff;
+}
+
+button:active {
+    background-color: #00abff;;
+}
+
+/* Input Fields and Textareas */
+input[type="text"],
+textarea {
+    padding: 4px;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 7vh;
+}
+
+/* Book Gallery Layout */
+.book-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center; 
+}
+
+/* Individual Book Item */
+.book-item {
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Scale up book item on hover */
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+/* Book Cover with Background Image */
+.book-cover {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay for Rating on Hover */
+.book-overlay {
+    position: absolute;
+    top: 1; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    opacity: 0; /* Hide by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    transition: opacity 0.3 ease;
+    height: 25%;
+}
+
+/* Show overlay on hover */
+.book-cover:hover .book-overlay {
+    opacity: 1;
+}
+
+/* Book Info */
+.book-info {
+    margin-top: 10px;
+}
+
+/* Book Title Styling */
+.book-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Book Author Styling */
+.book-author {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Rating Number Styling */
+.rating-number {
+    font-size: 14px;
+    color: whitesmoke;
+    margin-left: 5px;
+    vertical-align: middle; /* Align with stars */
+}
+
+/* Filter Modal Styles */
+#filterModal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Position it fixed on the screen */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Higher z-index to appear above other elements */
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute; /* Absolute positioning for modal content */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to center */
+    background: white; /* White background for the modal */
+    padding: 20px; /* Padding inside the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Close Button for Modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Dropdowns and Filter Label */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%; /* Full width for dropdowns */
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Add book */
+.rating-input i {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating-input i.selected {
+    color: #FFD700;
+}
+
+#Description{
+    resize: vertical;
+    min-height: 12vh;
+}
+
+.addBookTitle {
+    margin: 2rem auto;
+}
+
+.addBookForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    min-width: 200px;
+    border: 1px solid black;
+    border-radius: 7%;
+    padding: 2rem;
+    margin: auto;
+}
+
+.addBookForm label:not(:first-child) {
+    padding-top: 1rem;
+}
+
+.addBookForm label {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    gap: 1rem;
+}
+
+.addBookForm button {
+    width: 6rem;
+    min-width: 3rem;
+}
+
+/* Book Details Page Layout */
+.book-details-container {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 50px;
+}
+
+/* Book Image Styling */
+.book-image {
+    flex: 1;
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.book-image img {
+    min-width: 300px;
+    max-width: 60%;
+    height: auto;
+}
+
+/* Book Info Styling */
+.book-details-container .book-info {
+    flex: 2;
+}
+
+#book-description,
+#book-title {
+    color: #444;
+}
+
+/* Average Rating Styling */
+.rating-container {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    color: #FFD700; /* Gold for filled stars */
+}
+
+/* Review Section */
+.reviews-section {
+    margin-top: 50px;
+    padding-top: 50px;;
+    width: 50%;
+    min-width: 600px;
+    margin: auto;
+}
+
+#reviewInput {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+}
+
+#submitReview {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#submitReview:hover {
+    background-color: #555;
+}
+
+#submitReview:active {
+    background: #bbb;
+    color: black;
+}
+
+.addReviewContainer {
+    margin-top: 100px;
+}
+
+/* Styling for each review item */
+.review-item {
+    background-color: #f0f0f0; /* Light gray background for contrast */
+    padding: 15px; /* Add some padding for spacing inside */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between each review */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling for the Return and Delete buttons */
+.action-buttons-details {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button#returnButton, button#deleteButton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button#returnButton {
+    background-color: #4CAF50;
+}
+
+button#returnButton:hover {
+    background-color: #4caf4f73;
+}
+
+button#deleteButton {
+    background-color: #F44336;
+}
+
+button#deleteButton:hover {
+    background-color: #fa4a3a88;
+}
+
+/* Close Modal Background Overlay */
+.deleteModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.delete-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 30%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#confirmDelete, #cancelDelete {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmDelete {
+    background-color: #F44336;
+    color: #fff;
+}
+
+#cancelDelete {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Styling for the Average Rating Number */
+.rating-container .details{
+    color: #333; 
+    font-size: 14px; /* Adjust font size to match star size */
+    margin-left: 8px; /* Space between the stars and the number */
+    line-height: 1; /* Remove extra space in inline elements */
+    display: inline-flex; /* Better alignment control */
+    align-items: center; /* Centers the number with respect to the stars */
+}

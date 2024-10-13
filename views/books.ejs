@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Title -->
+     <h1>Book Gallery</h1>
+
+    <!-- Button for adding a book and filtering -->
+    <div class="actions-buttons">
+        <button id="addBookBtn" onclick="window.location.href='/books/add'">Add Book Review</button>
+        <button id="filterBtn">Filter</button>
+    </div>
+
+    <!-- Container for Displaying Book Gallery -->
+    <div id="booksContainer" class="book-gallery">
+        <!-- Book items will be dynamically injected here -->
+    </div>
+
+    <!-- Filter Modal (hidden by default) -->
+     <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Filter Books</h2>
+
+            <!-- Filter options -->
+            <label for="filterBy">Filter by:</label>
+            <select id="filterBy">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="rating">Rating</option>
+            </select>
+
+            <label for="order">Order</label>
+            <select id="order">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+
+            <!-- Button to Apply Filter -->
+            <button id="applyFilter">Apply Filter</button>
+        </div>
+    </div>
+
+    <!-- Link to external -->
+    <script src="/js/books.js"></script> <!-- For fetching and displaying books -->
+    <script src="/js/filterModal.js"></script> <!-- For handling filter modal -->
+
+</body>
+</html>

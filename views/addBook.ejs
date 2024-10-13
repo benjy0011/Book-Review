@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Book</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="addBookTitle">Book Reviews</h1>
+
+    <!-- From for adding a new book -->
+     <form id="addBookForm" method="POST" class="addBookForm">
+        <label for="BookName">Book Title</label>
+        <input type="text" name="BookName" required placeholder="Romeo and Juliet" maxlength="45">
+
+        <label for="BookAuthor">Author</label>
+        <input type="text" name="BookAuthor" required placeholder="William Shakespeare" maxlength="45">
+
+        <label for="BookImage">Image Link</label>
+        <input type="text" name="BookImage" required placeholder="http://www.example.com/image1.jpg">
+
+        <label for="Description">Description</label>
+        <textarea name="Description" id="Description" required placeholder="Romeo and Juliet is a ......"></textarea>
+
+        <label for="rating">Rating</label>
+        <div class="rating-input">
+            <i class="ri-star-fill" data-value="1"></i>
+            <i class="ri-star-fill" data-value="2"></i>
+            <i class="ri-star-fill" data-value="3"></i>
+            <i class="ri-star-fill" data-value="4"></i>
+            <i class="ri-star-fill" data-value="5"></i>
+        </div>
+        <input type="hidden" id="ratingValue" name="rating" value=0>
+
+        <label for="review">Review (optional)</label>
+        <textarea name="review" placeholder="I love this book!"></textarea>
+
+        <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="window.location.href='/books'">Cancel</button>
+        </div>
+        
+     </form>
+
+     <script src="/js/ratingInput.js"></script> <!-- External JS for star rating -->
+     <script src="/js/addBook.js"></script>
+</body>
+</html>

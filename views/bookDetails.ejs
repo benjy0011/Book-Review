@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Buttons for returning and deleteing the book -->
+    <div class="action-buttons-details">
+        <button id="returnButton">Return</button>
+        <button id="deleteButton">Delete Book</button>
+    </div>
+
+    <!-- Book Details Container  -->
+    <div class="book-details-container">
+        <!-- Book Picture (Top Left) -->
+        <div class="book-image">
+            <img src="" alt="Book Cover" class="book-cover" id="book-cover">
+        </div>
+
+        <!-- Top Right: Book Information -->
+         <div class="book-info">
+            <p>Title:</p>
+            <p class="book-title" id="book-title"></p>
+            <p>Author:</p>
+            <p class="book-author" id="book-author"></p>
+            <p>Description:</p>
+            <p class="book-description" id="book-description"></p>
+            <p>Rating:</p>
+
+            <!-- Average Rating in Stars -->
+             <div class="rating-container" id="rating-container"></div>
+         </div>
+    </div>
+
+    <!-- Bottom section for Reviews -->
+    <div class="reviews-section">
+        <h2>Reviews</h2>
+        <!-- Container for reviews -->
+        <div id="reviewsContainer"></div>
+
+        <div class="addReviewContainer">
+            <h4>Add a Review</h4>
+            <textarea id="reviewInput" placeholder="Write your review..."></textarea>
+            <div class="rating-input">
+                <i class="ri-star-fill" data-value="1"></i>
+                <i class="ri-star-fill" data-value="2"></i>
+                <i class="ri-star-fill" data-value="3"></i>
+                <i class="ri-star-fill" data-value="4"></i>
+                <i class="ri-star-fill" data-value="5"></i>
+            </div>
+            <input type="hidden" id="ratingValue" value="">
+
+            <button id="submitReview">Submit Review</button>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="deleteModal">
+        <div class="delete-modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>Are you sure you want to delete this book?</p>
+            <button id="confirmDelete">Yes, Delete</button>
+            <button id="cancelDelete">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/js/ratingInput.js"></script>
+    <script src="/js/bookDetails.js"></script>
+</body>
+</html>
