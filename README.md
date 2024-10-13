@@ -20,7 +20,7 @@ A book review platform (backend focused) built with Node.js, Express, and MySQL.
 - Main Page (Book Gallery)
 - ![screencapture-localhost-3000-books-2024-10-13-23_34_17](https://github.com/user-attachments/assets/636402af-c1ad-411a-bbea-0a55d8dca55a)
 (hover to see ratings)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/7146b9fa-8c03-4ce0-b864-5df37ed93f35)
 - Filter feature
 ![Screenshot_13-10-2024_23390_localhost](https://github.com/user-attachments/assets/c125b75c-1d12-4609-b8c7-5ca9b05c016a)
 ![image](https://github.com/user-attachments/assets/6c838f8a-6e07-411b-bc24-2db55bc1dfc3)
